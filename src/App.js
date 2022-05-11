@@ -6,9 +6,9 @@ import { motion } from 'framer-motion';
 import Films from './Films';
 import logo from '../src/assets/nesflix.png';
 
-const FEATURED_API = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=b21f5bb210ba43688cca1a0fe285e801&language=en&page=1';
+const FEATURED_API = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=83d150cc871053eb1429b479131bd3d0&language=en&page=1';
 
-const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?&api_key=b21f5bb210ba43688cca1a0fe285e801&query=';
+const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?&api_key=83d150cc871053eb1429b479131bd3d0&query=';
 
 function App() {
 
@@ -21,7 +21,7 @@ function App() {
   }, []);
 
   const fetchPopular = async () => {
-    const data = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=b21f5bb210ba43688cca1a0fe285e801&language=en&page=1');
+    const data = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=83d150cc871053eb1429b479131bd3d0&language=en&page=1');
 
     const movies = await data.json();
     setPopular(movies.results);
