@@ -89,7 +89,7 @@ function App() {
 
       <div className='film-app'>
         {films.length > 0 && films.map((film) => (
-          <a href='https://repelis.red/' target='_blank'><Films key={film.id} {...film}/></a>
+          <a href='./index.html'><Films key={film.id} {...film}/></a>
         ))}
       </div>
 
