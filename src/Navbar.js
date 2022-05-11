@@ -1,11 +1,18 @@
-import React from 'react'
+import React from 'react';
+import logo from '../src/assets/nesflix.png'
+
 
 const Navbar = () => {
     return (
         <header className='header'>
-            <nav className='nav'>
-                <a href='./indexhtml' className='logo'>Logo</a>
-            </nav>
+            <div className='logo'>
+                <img src={logo} alt=''/>
+            </div>
+            <div className='buscar'>
+                <label>Buscar </label>
+            <input className='search' type="search" placeholder="Encuentra tu peli...">
+            </input>
+            </div>
         </header>
     )
 }
