@@ -22,7 +22,7 @@ function Filter ({ setActiveGenre, activeGenre, setFiltered, popular }) {
             <button  className={activeGenre === 80 ? "active" : ""}  onClick={() => setActiveGenre(80)}>Crimen</button>
             <button  className={activeGenre === 878 ? "active" : ""}  onClick={() => setActiveGenre(878)}>Ficción</button>
             <button  className={activeGenre === 18 ? "active" : ""}  onClick={() => setActiveGenre(18)}>Drama</button>
-            <button  className={activeGenre === 14 ? "active" : ""}  onClick={() => setActiveGenre(14)}>Fantasía</button>
+            {/* <button  className={activeGenre === 14 ? "active" : ""}  onClick={() => setActiveGenre(14)}>Fantasía</button> */}
         </div>
     )
 }

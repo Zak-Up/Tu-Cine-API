@@ -1,6 +1,7 @@
 .movie-app{
-  background: linear-gradient(to top, #2d342c , #400003);
+  background: linear-gradient(to top, #181b17 , #400003);
   margin-top: 3rem;
+  padding-bottom: 2rem;
 }
 
 .popular-movies{
@@ -11,6 +12,7 @@
   margin-top: 2rem;
   margin-right: 1rem;
   margin-left: 1rem;
+  margin-bottom: 2rem;
 }
 
 .App{
@@ -47,9 +49,10 @@ span {
 
 .filter-container button{
   margin-top: 1rem;
-  margin-right: 1.5rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
   margin-left: 2rem;
-  min-width: 5rem;
+  width: 6rem;
   padding: 0.7rem 1rem;
   border: none;
   background: rgba(253, 11, 11, 0.943);
@@ -82,13 +85,14 @@ button.active{
   display: flex;
   width: 100%;
   background-color: rgba(0, 0, 1, 0.915);
-  padding: 0.7rem;
+  padding: 0.3rem;
   position: fixed;
   z-index: 1;
 }
+
 .buscar{
-  display: inline-block;
-  margin-left: 70%;
+  margin-top: 1.5rem;
+  margin-left: 60%;
 }
 
 .buscar label{
@@ -100,11 +104,10 @@ button.active{
 .buscar input{
   padding: 7px;
   border-radius: 5px;
-  width: 100%;
 }
 
 .film{
-  width: 260px;
+  width: 230px;
   background-color: rgba(0, 0, 0, 0.915);
   border-radius: 5px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
@@ -156,6 +159,7 @@ button.active{
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
 }
 
 .logo{
@@ -169,7 +173,7 @@ button.active{
 }
 
 .titulo{
-  margin-top: 8rem;
+  margin-top: 8.5rem;
   margin-bottom: 2rem;
   margin-left: 4rem;
   font-weight: bold;
@@ -192,3 +196,252 @@ button.active{
 .titulo-filter h1{
   padding: 2rem;
 }
+
+.footer{
+  background-color: rgba(0, 0, 0, 0.915);
+  height: 8rem;
+  text-align: center;
+  padding: 4rem;
+  color: white;
+}
+
+/* ---====== For Big devices ======---- */
+
+@media screen and (max-width: 1020px){
+  .header{
+    display: block;
+    width: 100%;
+    background-color: rgba(0, 0, 1, 0.915);
+    padding: 0.1rem;
+    position: fixed;
+    z-index: 1;
+  }
+
+  .logo{
+    margin-left: 22rem;
+    margin-top: 1rem;
+  }
+
+  .logo img{
+    width: 150px;
+    margin: 0;
+  }
+
+  .buscar{
+    display: block;
+    margin-top: 0;
+    margin-left: 8.5%;
+  }
+  
+  .buscar label{
+    margin: 0;
+    padding: 2rem;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    font-size: 30px;
+  }
+  
+  .buscar input{
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    padding: 9px;
+    border-radius: 5px;
+    width: 80%;
+  }
+
+  .titulo{
+    margin-top: 18rem;
+  }
+
+  .film-app{
+    margin: 0;
+  }
+
+  .film{
+    width: 220px;
+  }
+}
+
+/* ---====== For medium divices ======---- */
+
+@media screen and (max-width: 520px){
+  .header{
+    display: block;
+    width: 100%;
+    background-color: rgba(0, 0, 1, 0.915);
+    padding: 0.1rem;
+    position: fixed;
+    z-index: 1;
+  }
+
+  .logo{
+    margin-left: 9.5rem;
+    margin-top: 1rem;
+  }
+
+  .logo img{
+    width: 120px;
+    margin: 0;
+  }
+
+  .buscar{
+    display: block;
+    margin-top: 0;
+    margin-left: 4%;
+  }
+  
+  .buscar label{
+    margin: 0;
+    padding: 2rem;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    font-size: 25px;
+  }
+  
+  .buscar input{
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    padding: 7px;
+    border-radius: 5px;
+    width: 80%;
+  }
+
+  .titulo{
+    margin-top: 14rem;
+  }
+
+  .film-app{
+    margin: 0 19%;
+  }
+
+  .filter-container button{
+    margin-top: 1rem;
+    margin-right: 0.5rem;
+    margin-left: 1.5rem;
+    width: 6rem;
+    padding: 0.4rem 1rem;
+    border: none;
+    background: rgba(253, 11, 11, 0.943);
+    color: white;
+    border-radius: 3px;
+    border: 2px solid rgb(53, 25, 25);
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .titulo-filter{
+    text-align: center;
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+    font-weight: bold;
+    font-size: 10px;
+    color: white;
+  }
+  
+  .titulo-filter h1{
+    padding: 2rem;
+  }
+
+  .popular-movies{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-column-gap: 1rem;
+    grid-row-gap: 2rem;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* ---======= For small Devices =======--- */
+@media screen and (max-width: 390px ){
+    .header{
+    display: block;
+    width: 100%;
+    background-color: rgba(0, 0, 1, 0.915);
+    padding: 0.1rem;
+    position: fixed;
+    z-index: 1;
+  }
+
+  .logo{
+    margin-left: 7.7rem;
+  }
+
+  .buscar{
+    display: block;
+    margin-top: 0;
+    margin-left: 1%;
+  }
+  
+  .buscar label{
+    margin: 0;
+    padding: 2rem;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .buscar input{
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    padding: 7px;
+    border-radius: 5px;
+    width: 80%;
+  }
+
+  .titulo{
+    margin-top: 14rem;
+  }
+
+  .film-app{
+    margin: 0 13%;
+  }
+
+  .filter-container button{
+    margin-top: 1rem;
+    margin-right: 0.5rem;
+    margin-left: 1rem;
+    width: 6rem;
+    padding: 0.4rem 1rem;
+    border: none;
+    background: rgba(253, 11, 11, 0.943);
+    color: white;
+    border-radius: 3px;
+    border: 2px solid rgb(53, 25, 25);
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .titulo-filter{
+    text-align: center;
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+    font-weight: bold;
+    font-size: 10px;
+    color: white;
+  }
+  
+  .titulo-filter h1{
+    padding: 2rem;
+  }
+
+  .popular-movies{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-column-gap: 1rem;
+    grid-row-gap: 2rem;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+

@@ -5,10 +5,11 @@ import Filter from './Filter';
 import { motion } from 'framer-motion';
 import Films from './Films';
 import logo from '../src/assets/nesflix.png';
+import Footer from './Footer';
 
-const FEATURED_API = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=83d150cc871053eb1429b479131bd3d0&language=en&page=1';
+const FEATURED_API = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=b21f5bb210ba43688cca1a0fe285e801&language=en&page=1';
 
-const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?&api_key=83d150cc871053eb1429b479131bd3d0&query=';
+const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?&api_key=b21f5bb210ba43688cca1a0fe285e801&query=';
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
   }, []);
 
   const fetchPopular = async () => {
-    const data = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=83d150cc871053eb1429b479131bd3d0&language=en&page=1');
+    const data = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=b21f5bb210ba43688cca1a0fe285e801&language=en&page=1');
 
     const movies = await data.json();
     setPopular(movies.results);
@@ -68,7 +69,7 @@ function App() {
         </div>
         <div className='buscar'>
           <form onSubmit={handleOnSubmit}>
-            <label>Buscar </label>
+            <label>Buscar: </label>
             <input 
             className='search' 
             type="search" 
@@ -89,7 +90,7 @@ function App() {
 
       <div className='film-app'>
         {films.length > 0 && films.map((film) => (
-          <a href='./index.html'><Films key={film.id} {...film}/></a>
+          <a href='https://repelis.red/' target='_blank'><Films key={film.id} {...film}/></a>
         ))}
       </div>
 
@@ -109,8 +110,11 @@ function App() {
             return <Movie key={movie.id} movie={movie}/>;
           })}
         </motion.div>
-
       </div>
+
+        <div className='footer-app'>
+          <Footer/>
+        </div>
     </div>
     </>
   );
